@@ -7,14 +7,19 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        findViewById<StatsView>(R.id.stats).data = listOf(
-            150F,
-            25F,
-            250F,
-            100F,
-            50F,
-            80F,
-            400F,
-        )
+        val view = findViewById<StatsView>(R.id.stats)
+        view.postDelayed({
+            view.data = listOf(
+                400F,
+                150F,
+                200F,
+                300F,
+                600F,
+                300F,
+                400F,
+                700F
+            )
+        }, 1000)
+
     }
 }
